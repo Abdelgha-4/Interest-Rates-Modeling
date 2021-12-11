@@ -374,17 +374,14 @@ else:
     
     st.write("""## Comparaison et conclusions""")
     st.write("""Le reproche formulé à l’encontre des modèles de type
-    Nelson-Siegel est leur insuffisante flexibilité, et même lorsqu'on utilise le modèle 
-    Nelson-Siegel augmenté, qui est supposé plus flexible, on face à des problèmes 
-    de convergence pour estimer les paramétres supplémentaires. En revanche les 
+    Nelson-Siegel est leur insuffisante flexibilité, en l'addition des problèmes
+    de convergence, qui sont souvent rencontré dans le modèle Nelson-Siegel augmenté, 
+    pour estimer les paramétres supplémentaires. En revanche les 
     variables de ces modèles sont interprétables financièrement.""")
     st.write("""D'autre part, les modèles à splines sont beaucoup plus 
-    flexibles qui leur permet de reconstruire toutes les formes de courbe 
-    rencontrées sur le marché mais présentent au contraire des
-    paramètres qui ne sont pas interprétables d’un point de vue financier.
-    L'avantage des modèles à splines tient à leur grande flexibilité 
-    qui leur permet de reconstruire toutes les formes de courbe 
-    rencontrées sur le marché.""")
+    flexibles, ce qui leur permet de reconstruire toutes les formes de courbe 
+    rencontrées sur le marché. Mais présentent au contraire des
+    paramètres qui ne sont pas interprétables d’un point de vue financier.""")
 for _ in range(15):
     st.sidebar.write("")
 st.sidebar.write("""
