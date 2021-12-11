@@ -317,7 +317,7 @@ else:
     en circulation, et sont basées sur une convention de composition continue. Les valeurs sont
     des estimations anuelles des rendements à partir de 2000 pour toute la plage d'échéances couverte
     par les titres du Trésor en circulation.""")
-    
+
     data = import_data("interest_rates.csv", index_col=0, parse_dates=True)
     st.write("#### Représentation tabulaire des données :")
     st.dataframe(data.set_index(data.index.year, drop=True))
@@ -371,7 +371,20 @@ else:
     ax.set_ylabel('Taux Z.C')
     ax.legend(loc="lower right", prop={'size': 7.2})
     st.pyplot(fig)
-
+    
+    st.write("""## Comparaison et conclusions""")
+    st.write("""Le reproche formulé à l’encontre des modèles de type
+    Nelson-Siegel est leur insuffisante flexibilité, et même lorsqu'on utilise le modèle 
+    Nelson-Siegel augmenté, qui est supposé plus flexible, on face à des problèmes 
+    de convergence pour estimer les paramétres supplémentaires. En revanche les 
+    variables de ces modèles sont interprétables financièrement.""")
+    st.write("""D'autre part, les modèles à splines sont beaucoup plus 
+    flexibles qui leur permet de reconstruire toutes les formes de courbe 
+    rencontrées sur le marché mais présentent au contraire des
+    paramètres qui ne sont pas interprétables d’un point de vue financier.
+    L'avantage des modèles à splines tient à leur grande flexibilité 
+    qui leur permet de reconstruire toutes les formes de courbe 
+    rencontrées sur le marché.""")
 for _ in range(15):
     st.sidebar.write("")
 st.sidebar.write("""
